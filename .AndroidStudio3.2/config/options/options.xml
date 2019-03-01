@@ -31,7 +31,7 @@
     <property name="AndroidInitConfigurator.V5" value="true" />
     <property name="AndroidPlatformName" value="Android API 28 Platform" />
     <property name="ColorChooser.RecentColors" value="186-232-50-255" />
-    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.7284644" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.74531835" />
     <property name="ConstraintLayoutPreferenceAutoConnect" value="true" />
     <property name="Default.savedEditorTheme" value="_@user_Default" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
