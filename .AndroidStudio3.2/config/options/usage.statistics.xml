@@ -9,14 +9,14 @@
       <entry action="$Undo" count="387" />
       <entry action="Android.RunAndroidAvdManager" count="2" />
       <entry action="Android.RunAndroidSdkManager" count="10" />
-      <entry action="CheckinProject" count="11" />
+      <entry action="CheckinProject" count="14" />
       <entry action="ChooseRunConfiguration" count="1" />
       <entry action="CleanGradleProject" count="5" />
       <entry action="ContextHelp" count="1" />
       <entry action="Cvs.BrowseCVSRepository" count="1" />
       <entry action="Debug" count="8" />
       <entry action="DialogOkAction Enter" count="20" />
-      <entry action="EditorBackSpace" count="4856" />
+      <entry action="EditorBackSpace" count="4862" />
       <entry action="EditorChooseLookupItem" count="738" />
       <entry action="EditorChooseLookupItemReplace" count="1" />
       <entry action="EditorCopy" count="109" />
@@ -30,7 +30,7 @@
       <entry action="EditorLeft" count="444" />
       <entry action="EditorLeftWithSelection" count="197" />
       <entry action="EditorPaste" count="331" />
-      <entry action="EditorRight" count="1115" />
+      <entry action="EditorRight" count="1116" />
       <entry action="EditorRightWithSelection" count="49" />
       <entry action="EditorSplitLine" count="3" />
       <entry action="EditorStartNewLine" count="4" />
@@ -62,7 +62,7 @@
       <entry action="Subversion.ShareWholeProject" count="1" />
       <entry action="ToggleLineBreakpoint" count="6" />
       <entry action="Vcs.Checkout.Git" count="1" />
-      <entry action="Vcs.Push" count="2" />
+      <entry action="Vcs.Push" count="3" />
       <entry action="Vcs.RefreshStatuses" count="1" />
       <entry action="Vcs.UpdateProject" count="1" />
       <entry action="template.create.ActivityEmpty Activity" count="24" />
@@ -170,9 +170,9 @@
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Browse CVS Repository..." count="1" />
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Show Git Repository Log..." count="1" />
       <entry path="VCS -&gt; Checkout from Version Control -&gt; Git" count="1" />
-      <entry path="VCS -&gt; Commit" count="11" />
+      <entry path="VCS -&gt; Commit" count="14" />
       <entry path="VCS -&gt; Enable Version Control Integration..." count="3" />
-      <entry path="VCS -&gt; Git -&gt; Push..." count="2" />
+      <entry path="VCS -&gt; Git -&gt; Push..." count="3" />
       <entry path="VCS -&gt; Git -&gt; Remotes..." count="4" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project (Subversion)..." count="1" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project on GitHub" count="2" />
@@ -183,7 +183,7 @@
   <component name="ShortcutsCollector">
     <counts>
       <entry shortcut="Alt+Enter" count="153" />
-      <entry shortcut="Backspace" count="4840" />
+      <entry shortcut="Backspace" count="4846" />
       <entry shortcut="Ctrl+A" count="32" />
       <entry shortcut="Ctrl+B" count="1" />
       <entry shortcut="Ctrl+C" count="110" />
@@ -201,7 +201,7 @@
       <entry shortcut="F1" count="1" />
       <entry shortcut="Insert" count="2" />
       <entry shortcut="Left" count="444" />
-      <entry shortcut="Right" count="1115" />
+      <entry shortcut="Right" count="1116" />
       <entry shortcut="Shift+Backspace" count="16" />
       <entry shortcut="Shift+Down" count="5" />
       <entry shortcut="Shift+Enter" count="4" />
