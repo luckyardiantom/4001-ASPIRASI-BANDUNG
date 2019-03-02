@@ -9,15 +9,15 @@
       <entry action="$Undo" count="402" />
       <entry action="Android.RunAndroidAvdManager" count="2" />
       <entry action="Android.RunAndroidSdkManager" count="12" />
-      <entry action="CheckinProject" count="18" />
+      <entry action="CheckinProject" count="19" />
       <entry action="ChooseRunConfiguration" count="1" />
       <entry action="CleanGradleProject" count="5" />
       <entry action="ContextHelp" count="1" />
       <entry action="Cvs.BrowseCVSRepository" count="1" />
       <entry action="Debug" count="8" />
       <entry action="DialogOkAction Enter" count="20" />
-      <entry action="EditorBackSpace" count="5031" />
-      <entry action="EditorChooseLookupItem" count="769" />
+      <entry action="EditorBackSpace" count="5032" />
+      <entry action="EditorChooseLookupItem" count="770" />
       <entry action="EditorChooseLookupItemReplace" count="1" />
       <entry action="EditorCopy" count="109" />
       <entry action="EditorCut" count="14" />
@@ -40,7 +40,7 @@
       <entry action="EditorUpWithSelection" count="13" />
       <entry action="Exit" count="1" />
       <entry action="Find" count="11" />
-      <entry action="Git.Configure.Remotes" count="8" />
+      <entry action="Git.Configure.Remotes" count="9" />
       <entry action="Git.Log" count="1" />
       <entry action="Git.Pull" count="6" />
       <entry action="Github.Share" count="2" />
@@ -65,7 +65,7 @@
       <entry action="Subversion.ShareWholeProject" count="1" />
       <entry action="ToggleLineBreakpoint" count="6" />
       <entry action="Vcs.Checkout.Git" count="1" />
-      <entry action="Vcs.Push" count="6" />
+      <entry action="Vcs.Push" count="7" />
       <entry action="Vcs.RefreshStatuses" count="1" />
       <entry action="Vcs.UpdateProject" count="1" />
       <entry action="template.create.ActivityEmpty Activity" count="24" />
@@ -91,7 +91,7 @@
     <feature id="codeassists.parameterInfo" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.inlineParameter" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickdefinition" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.basic" count="694" last-shown="0" last-used="1551534298618" shown-count="0" />
+    <feature id="editing.completion.basic" count="695" last-shown="0" last-used="1551539266165" shown-count="0" />
     <feature id="refactoring.inlineConst" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="tag.name.completion" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="generate.definitions" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -116,8 +116,8 @@
     <feature id="refactoring.appCodeIntroduceVariable" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.moveMembers" count="0" last-shown="0" last-used="0" shown-count="0" />
     <completionStatsTag>
-      <option name="sparedCharacters" value="7673" />
-      <option name="invocations" value="660" />
+      <option name="sparedCharacters" value="7712" />
+      <option name="invocations" value="661" />
       <option name="startDate" value="1548262800000" />
       <option name="dayCount" value="15" />
       <option name="lastDate" value="1551459600000" />
@@ -173,11 +173,11 @@
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Browse CVS Repository..." count="1" />
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Show Git Repository Log..." count="1" />
       <entry path="VCS -&gt; Checkout from Version Control -&gt; Git" count="1" />
-      <entry path="VCS -&gt; Commit" count="18" />
+      <entry path="VCS -&gt; Commit" count="19" />
       <entry path="VCS -&gt; Enable Version Control Integration..." count="5" />
       <entry path="VCS -&gt; Git -&gt; Pull..." count="6" />
-      <entry path="VCS -&gt; Git -&gt; Push..." count="6" />
-      <entry path="VCS -&gt; Git -&gt; Remotes..." count="8" />
+      <entry path="VCS -&gt; Git -&gt; Push..." count="7" />
+      <entry path="VCS -&gt; Git -&gt; Remotes..." count="9" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project (Subversion)..." count="1" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project on GitHub" count="2" />
       <entry path="VCS -&gt; Refresh File Status" count="1" />
@@ -187,7 +187,7 @@
   <component name="ShortcutsCollector">
     <counts>
       <entry shortcut="Alt+Enter" count="164" />
-      <entry shortcut="Backspace" count="5014" />
+      <entry shortcut="Backspace" count="5015" />
       <entry shortcut="Ctrl+A" count="32" />
       <entry shortcut="Ctrl+B" count="1" />
       <entry shortcut="Ctrl+C" count="110" />
@@ -201,7 +201,7 @@
       <entry shortcut="Ctrl+Z" count="398" />
       <entry shortcut="Delete" count="91" />
       <entry shortcut="Down" count="6870" />
-      <entry shortcut="Enter" count="1540" />
+      <entry shortcut="Enter" count="1541" />
       <entry shortcut="F1" count="1" />
       <entry shortcut="Insert" count="2" />
       <entry shortcut="Left" count="452" />
@@ -257,6 +257,7 @@
       <entry feature="execute.AndroidRunConfigurationType.Run" count="226" />
       <entry feature="execute.AndroidTestRunConfigurationType.Run" count="3" />
       <entry feature="git.branch.create.new" count="1" />
+      <entry feature="git.branch.rename" count="1" />
       <entry feature="ide.settings.Android SDK" count="2" />
       <entry feature="ideaapp.started" count="81" />
       <entry feature="project.view.pane.AndroidView" count="14" />
