@@ -2,6 +2,7 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
+        <option value="$USER_HOME$/Documents/Android/responsi-mobile-master" />
         <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
         <option value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities" />
         <option value="$USER_HOME$/Documents/Android/Unit 1/Lession 1/Hello world" />
@@ -42,10 +43,10 @@
     </option>
     <option name="openPaths">
       <list>
-        <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
+        <option value="$USER_HOME$/Documents/Android/responsi-mobile-master" />
       </list>
     </option>
-    <option name="lastPath" value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
+    <option name="lastPath" value="$USER_HOME$/Documents/Android/responsi-mobile-master" />
     <option name="pid" value="" />
     <option name="additionalInfo">
       <map>
@@ -77,8 +78,8 @@
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1551521314257" />
-              <option name="buildTimestamp" value="1539049463067" />
+              <option name="projectOpenTimestamp" value="1551530212385" />
+              <option name="buildTimestamp" value="1539049457913" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -357,6 +358,17 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Documents/Android/responsi-mobile-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1551534083195" />
+              <option name="buildTimestamp" value="1539049457913" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Documents/Lession 1/Hello world">
           <value>
             <RecentProjectMetaInfo>
@@ -469,6 +481,6 @@
         </entry>
       </map>
     </option>
-    <option name="lastProjectLocation" value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master" />
+    <option name="lastProjectLocation" value="$USER_HOME$/Documents/Android" />
   </component>
 </application>
