@@ -34,7 +34,7 @@
                 android:title="Send" />
 
             <item
-                android:id="@+id/f_keluar"
+                android:id="@+id/keluar"
                 android:icon="@drawable/icon_keluar"
                 android:title="Keluar" />
         </menu>
