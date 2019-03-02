@@ -6,42 +6,43 @@
       <entry action="$Paste" count="30" />
       <entry action="$Redo" count="3" />
       <entry action="$SelectAll" count="32" />
-      <entry action="$Undo" count="387" />
+      <entry action="$Undo" count="402" />
       <entry action="Android.RunAndroidAvdManager" count="2" />
-      <entry action="Android.RunAndroidSdkManager" count="10" />
-      <entry action="CheckinProject" count="14" />
+      <entry action="Android.RunAndroidSdkManager" count="12" />
+      <entry action="CheckinProject" count="16" />
       <entry action="ChooseRunConfiguration" count="1" />
       <entry action="CleanGradleProject" count="5" />
       <entry action="ContextHelp" count="1" />
       <entry action="Cvs.BrowseCVSRepository" count="1" />
       <entry action="Debug" count="8" />
       <entry action="DialogOkAction Enter" count="20" />
-      <entry action="EditorBackSpace" count="4862" />
+      <entry action="EditorBackSpace" count="4909" />
       <entry action="EditorChooseLookupItem" count="738" />
       <entry action="EditorChooseLookupItemReplace" count="1" />
       <entry action="EditorCopy" count="109" />
       <entry action="EditorCut" count="14" />
       <entry action="EditorDelete" count="16" />
       <entry action="EditorDeleteLine" count="11" />
-      <entry action="EditorDown" count="6848" />
+      <entry action="EditorDown" count="6852" />
       <entry action="EditorDownWithSelection" count="5" />
-      <entry action="EditorEnter" count="647" />
+      <entry action="EditorEnter" count="664" />
       <entry action="EditorIndentSelection" count="1" />
       <entry action="EditorLeft" count="444" />
       <entry action="EditorLeftWithSelection" count="197" />
-      <entry action="EditorPaste" count="331" />
+      <entry action="EditorPaste" count="341" />
       <entry action="EditorRight" count="1116" />
       <entry action="EditorRightWithSelection" count="49" />
       <entry action="EditorSplitLine" count="3" />
       <entry action="EditorStartNewLine" count="4" />
-      <entry action="EditorTab" count="23" />
+      <entry action="EditorTab" count="27" />
       <entry action="EditorToggleInsertState" count="2" />
       <entry action="EditorUp" count="5871" />
       <entry action="EditorUpWithSelection" count="13" />
       <entry action="Exit" count="1" />
       <entry action="Find" count="11" />
-      <entry action="Git.Configure.Remotes" count="4" />
+      <entry action="Git.Configure.Remotes" count="5" />
       <entry action="Git.Log" count="1" />
+      <entry action="Git.Pull" count="3" />
       <entry action="Github.Share" count="2" />
       <entry action="GotoDeclaration" count="5" />
       <entry action="HideAllWindows" count="74" />
@@ -49,20 +50,22 @@
       <entry action="NewAndroidVectorAsset" count="4" />
       <entry action="NewClass" count="8" />
       <entry action="NewProject" count="47" />
-      <entry action="OpenFile" count="51" />
+      <entry action="OpenFile" count="52" />
       <entry action="Progress Resumed" count="4" />
       <entry action="RebuildGradleProject" count="4" />
+      <entry action="RenameElement" count="1" />
       <entry action="RenameFile" count="2" />
       <entry action="RevealIn" count="1" />
-      <entry action="Run" count="235" />
+      <entry action="Run" count="241" />
+      <entry action="RunClass" count="1" />
       <entry action="SaveAll" count="60" />
       <entry action="SearchEverywhere" count="3" />
-      <entry action="ShowIntentionActions" count="153" />
+      <entry action="ShowIntentionActions" count="164" />
       <entry action="Start.Use.Vcs" count="3" />
       <entry action="Subversion.ShareWholeProject" count="1" />
       <entry action="ToggleLineBreakpoint" count="6" />
       <entry action="Vcs.Checkout.Git" count="1" />
-      <entry action="Vcs.Push" count="3" />
+      <entry action="Vcs.Push" count="4" />
       <entry action="Vcs.RefreshStatuses" count="1" />
       <entry action="Vcs.UpdateProject" count="1" />
       <entry action="template.create.ActivityEmpty Activity" count="24" />
@@ -72,7 +75,7 @@
   <component name="FeatureUsageStatistics" first-run="1548082058495" have-been-shown="false" show-in-other="true" show-in-compilation="true">
     <feature id="refactoring.moveTopLevel" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.introduceTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="refactoring.rename" count="2" last-shown="0" last-used="1550894818442" shown-count="0" />
+    <feature id="refactoring.rename" count="3" last-shown="0" last-used="1551451534935" shown-count="0" />
     <feature id="refactoring.pushDown" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.inlineMacro" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.changeSignature" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -95,7 +98,7 @@
     <feature id="refactoring.extractMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="refactoring.introduceDefine" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.surroundwith.expression" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.select.word" count="345" last-shown="0" last-used="1551018364267" shown-count="0" />
+    <feature id="editing.select.word" count="346" last-shown="0" last-used="1551452970948" shown-count="0" />
     <feature id="refactoring.extractSuperclass" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.goto.declaration" count="5" last-shown="0" last-used="1551008743834" shown-count="0" />
     <feature id="refactoring.inlineMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -162,18 +165,19 @@
       <entry path="File -&gt; New -&gt; New Project..." count="47" />
       <entry path="File -&gt; New -&gt; Open..." count="5" />
       <entry path="File -&gt; Open Recent -&gt; Reopen Project" count="1" />
-      <entry path="File -&gt; Open..." count="46" />
+      <entry path="File -&gt; Open..." count="47" />
       <entry path="Run -&gt; Run" count="6" />
       <entry path="Run -&gt; Run..." count="1" />
       <entry path="Tools -&gt; AVD Manager" count="2" />
-      <entry path="Tools -&gt; SDK Manager" count="10" />
+      <entry path="Tools -&gt; SDK Manager" count="12" />
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Browse CVS Repository..." count="1" />
       <entry path="VCS -&gt; Browse VCS Repository -&gt; Show Git Repository Log..." count="1" />
       <entry path="VCS -&gt; Checkout from Version Control -&gt; Git" count="1" />
-      <entry path="VCS -&gt; Commit" count="14" />
+      <entry path="VCS -&gt; Commit" count="16" />
       <entry path="VCS -&gt; Enable Version Control Integration..." count="3" />
-      <entry path="VCS -&gt; Git -&gt; Push..." count="3" />
-      <entry path="VCS -&gt; Git -&gt; Remotes..." count="4" />
+      <entry path="VCS -&gt; Git -&gt; Pull..." count="3" />
+      <entry path="VCS -&gt; Git -&gt; Push..." count="4" />
+      <entry path="VCS -&gt; Git -&gt; Remotes..." count="5" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project (Subversion)..." count="1" />
       <entry path="VCS -&gt; Import into Version Control -&gt; Share Project on GitHub" count="2" />
       <entry path="VCS -&gt; Refresh File Status" count="1" />
@@ -182,8 +186,8 @@
   </component>
   <component name="ShortcutsCollector">
     <counts>
-      <entry shortcut="Alt+Enter" count="153" />
-      <entry shortcut="Backspace" count="4846" />
+      <entry shortcut="Alt+Enter" count="164" />
+      <entry shortcut="Backspace" count="4893" />
       <entry shortcut="Ctrl+A" count="32" />
       <entry shortcut="Ctrl+B" count="1" />
       <entry shortcut="Ctrl+C" count="110" />
@@ -191,13 +195,13 @@
       <entry shortcut="Ctrl+F" count="13" />
       <entry shortcut="Ctrl+F1" count="6" />
       <entry shortcut="Ctrl+S" count="60" />
-      <entry shortcut="Ctrl+V" count="333" />
+      <entry shortcut="Ctrl+V" count="343" />
       <entry shortcut="Ctrl+X" count="14" />
       <entry shortcut="Ctrl+Y" count="11" />
-      <entry shortcut="Ctrl+Z" count="383" />
+      <entry shortcut="Ctrl+Z" count="398" />
       <entry shortcut="Delete" count="91" />
-      <entry shortcut="Down" count="6854" />
-      <entry shortcut="Enter" count="1469" />
+      <entry shortcut="Down" count="6858" />
+      <entry shortcut="Enter" count="1486" />
       <entry shortcut="F1" count="1" />
       <entry shortcut="Insert" count="2" />
       <entry shortcut="Left" count="444" />
@@ -209,14 +213,14 @@
       <entry shortcut="Shift+Right" count="49" />
       <entry shortcut="Shift+Shift" count="3" />
       <entry shortcut="Shift+Up" count="13" />
-      <entry shortcut="Tab" count="25" />
+      <entry shortcut="Tab" count="29" />
       <entry shortcut="Up" count="5874" />
     </counts>
   </component>
   <component name="ToolbarClicksCollector">
     <counts>
       <entry action="Debug@NavBarToolbar" count="8" />
-      <entry action="Run@NavBarToolbar" count="229" />
+      <entry action="Run@NavBarToolbar" count="235" />
       <entry action="Show Options@ToolWindowHeader" count="1" />
       <entry action="com.android.tools.adtui.actions.DropDownAction@toolbar" count="3" />
       <entry action="com.android.tools.adtui.workbench.AttachedToolWindow$HideAction@TOOL_WINDOW_TOOLBAR" count="2" />
@@ -245,14 +249,15 @@
   </component>
   <component name="UsageTrigger">
     <counts>
-      <entry feature="StripeButton[Android Profiler].hidden" count="88" />
-      <entry feature="StripeButton[Android Profiler].shown" count="39" />
+      <entry feature="StripeButton[Android Profiler].hidden" count="89" />
+      <entry feature="StripeButton[Android Profiler].shown" count="40" />
       <entry feature="StripeButton[Version Control].hidden" count="2" />
       <entry feature="StripeButton[Version Control].shown" count="12" />
       <entry feature="execute.AndroidRunConfigurationType.Debug" count="8" />
-      <entry feature="execute.AndroidRunConfigurationType.Run" count="222" />
-      <entry feature="ide.settings.Android SDK" count="1" />
-      <entry feature="ideaapp.started" count="78" />
+      <entry feature="execute.AndroidRunConfigurationType.Run" count="226" />
+      <entry feature="execute.AndroidTestRunConfigurationType.Run" count="3" />
+      <entry feature="ide.settings.Android SDK" count="2" />
+      <entry feature="ideaapp.started" count="79" />
       <entry feature="project.view.pane.AndroidView" count="14" />
       <entry feature="project.view.pane.PackagesPane" count="4" />
       <entry feature="project.view.pane.ProjectPane" count="13" />

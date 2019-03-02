@@ -3,6 +3,7 @@
     <option name="recentPaths">
       <list>
         <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
+        <option value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities" />
         <option value="$USER_HOME$/Documents/Android/Unit 1/Lession 1/Hello world" />
         <option value="$USER_HOME$/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_Modul3" />
         <option value="$USER_HOME$/Documents/Android/RIZKA_1202160050_SI4002_PAB_Modul3" />
@@ -76,8 +77,8 @@
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1551448400793" />
-              <option name="buildTimestamp" value="1539049462313" />
+              <option name="projectOpenTimestamp" value="1551521314257" />
+              <option name="buildTimestamp" value="1539049463067" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -345,6 +346,17 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1551459733653" />
+              <option name="buildTimestamp" value="1539049462313" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Documents/Lession 1/Hello world">
           <value>
             <RecentProjectMetaInfo>
@@ -457,6 +469,6 @@
         </entry>
       </map>
     </option>
-    <option name="lastProjectLocation" value="$USER_HOME$/Documents/Android/Capstone" />
+    <option name="lastProjectLocation" value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master" />
   </component>
 </application>
