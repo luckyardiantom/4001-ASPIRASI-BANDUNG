@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
-
+//splasscreen sudah berubah tampilan lebih baik lagi
 public class SplashScreen extends Activity {
 
     //Set waktu lama splashscreen
