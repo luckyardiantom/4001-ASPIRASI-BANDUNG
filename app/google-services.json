@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "136811538148",
+    "firebase_url": "https://lapor-d0a49.firebaseio.com",
+    "project_id": "lapor-d0a49",
+    "storage_bucket": "lapor-d0a49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136811538148:android:540e00bcbc3917e7",
+        "android_client_info": {
+          "package_name": "com.example.lapor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136811538148-lco7qhdq0u1s3lqkdeucajminl0iq9ir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lapor",
+            "certificate_hash": "514d587789cbf75fe7a6e181c945089063c48e11"
+          }
+        },
+        {
+          "client_id": "136811538148-57gpvod4pn5qrn31umfkn7013nog57s9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuZAB_urRtXTufo8bcB2rz4apUV_MIePA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136811538148-57gpvod4pn5qrn31umfkn7013nog57s9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
