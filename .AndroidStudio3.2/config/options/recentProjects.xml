@@ -2,9 +2,12 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
-        <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
-        <option value="$USER_HOME$/Documents/Android/responsi-mobile-master" />
+        <option value="$USER_HOME$/Documents/Android/Capstone/Feedback" />
         <option value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities" />
+        <option value="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/KeyboardDialPhone" />
+        <option value="$USER_HOME$/Documents/Android/responsi-mobile-master/responsi-mobile-master" />
+        <option value="$USER_HOME$/Documents/Android/responsi-mobile-master" />
+        <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
         <option value="$USER_HOME$/Documents/Android/Unit 1/Lession 1/Hello world" />
         <option value="$USER_HOME$/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_Modul3" />
         <option value="$USER_HOME$/Documents/Android/RIZKA_1202160050_SI4002_PAB_Modul3" />
@@ -15,7 +18,6 @@
         <option value="$USER_HOME$/Documents/Android/Unit 2/Lession 1/DroidCafeInput" />
         <option value="$USER_HOME$/Documents/Android/Unit 2/Lession 1/DroidCafe" />
         <option value="$USER_HOME$/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul2" />
-        <option value="$USER_HOME$/Documents/Android/Capstone/Feedback" />
         <option value="$USER_HOME$/Documents/Android/Capstone/Test" />
         <option value="$USER_HOME$/Documents/Android/DZULFIKRI_1202164349_SI4006_PAB_Modul2/DZULFIKRI_1202164349_SI4006_PAB_Modul2" />
         <option value="$USER_HOME$/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul1" />
@@ -43,10 +45,10 @@
     </option>
     <option name="openPaths">
       <list>
-        <option value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
+        <option value="$USER_HOME$/Documents/Android/Capstone/Feedback" />
       </list>
     </option>
-    <option name="lastPath" value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan" />
+    <option name="lastPath" value="$USER_HOME$/Documents/Android/Capstone/Feedback" />
     <option name="pid" value="" />
     <option name="additionalInfo">
       <map>
@@ -67,8 +69,8 @@
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1550074815720" />
-              <option name="buildTimestamp" value="1539049462215" />
+              <option name="projectOpenTimestamp" value="1553151565829" />
+              <option name="buildTimestamp" value="1539049476397" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -78,8 +80,8 @@
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1551540089555" />
-              <option name="buildTimestamp" value="1539049481947" />
+              <option name="projectOpenTimestamp" value="1551746980468" />
+              <option name="buildTimestamp" value="1539049492492" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -347,14 +349,25 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/KeyboardDialPhone">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1552710066623" />
+              <option name="buildTimestamp" value="1539049480008" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities">
           <value>
             <RecentProjectMetaInfo>
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1551459733653" />
-              <option name="buildTimestamp" value="1539049462313" />
+              <option name="projectOpenTimestamp" value="1553151325431" />
+              <option name="buildTimestamp" value="1539049476397" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -364,8 +377,19 @@
               <option name="build" value="AI-181.5540.7.32.5056338" />
               <option name="productionCode" value="AI" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1551537557520" />
-              <option name="buildTimestamp" value="1539049481947" />
+              <option name="projectOpenTimestamp" value="1551747207295" />
+              <option name="buildTimestamp" value="1539049492492" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Android/responsi-mobile-master/responsi-mobile-master">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-181.5540.7.32.5056338" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1552655874375" />
+              <option name="buildTimestamp" value="1539049485230" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

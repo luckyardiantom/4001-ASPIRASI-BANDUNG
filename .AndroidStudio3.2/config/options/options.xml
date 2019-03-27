@@ -18,6 +18,7 @@
     <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.COMPONENT_TREE.SPLIT" value="true" />
     <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.LEFT.UNSCALED.WIDTH" value="225" />
     <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.PALETTE.LEFT" value="true" />
+    <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.PALETTE.MINIMIZED" value="true" />
     <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.RIGHT.UNSCALED.WIDTH" value="251" />
     <property name="ATTACHED_TOOL_WINDOW.NELE_EDITOR.TOOL_ORDER" value="PALETTE,PROPERTIES,COMPONENT_TREE" />
     <property name="ATTACHED_TOOL_WINDOW.Preview.LEFT.UNSCALED.WIDTH" value="225" />
@@ -31,21 +32,23 @@
     <property name="AndroidInitConfigurator.V5" value="true" />
     <property name="AndroidPlatformName" value="Android API 28 Platform" />
     <property name="ColorChooser.RecentColors" value="186-232-50-255" />
-    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.9363296" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.6142322" />
     <property name="ConstraintLayoutPreferenceAutoConnect" value="true" />
+    <property name="Copy.OpenInEditor" value="true" />
     <property name="Default.savedEditorTheme" value="_@user_Default" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
     <property name="MobileminApi" value="14" />
     <property name="ResourceChooserGridMode" value="true" />
-    <property name="android-component-compatibility-check" value="1551447629185" />
+    <property name="android-component-compatibility-check" value="1553698900667" />
     <property name="android.resource_dialog_splitter" value="0.4717647" />
     <property name="build.toolwindow.Build.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
     <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.run.selection.state" value="consoleView" />
     <property name="com.intellij.diagnostic.IdeErrorsDialogactiveTab" value="0" />
     <property name="create.project.preferred.importer" value="Android Gradle" />
     <property name="decompiler.legal.notice.accepted" value="true" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/Documents/Android/Capstone/PetunjukPenggunaan&#10;C:/Users/ASUS/Documents/Android/responsi-mobile-master&#10;C:/Users/ASUS/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities&#10;C:/Users/ASUS/Documents/Android/Unit 1/Lession 1/Hello world&#10;C:/Users/ASUS/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/RIZKA_1202160050_SI4002_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/Studi Case/RIZKA_1202160050_SI4002_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_MODUL3&#10;C:/Users/ASUS/Documents/Android/Studi Case/RIZKA_1202160050_SI4002_PAB_Modul3.rar&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4/MaterialMe-Starter&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4/Scorekeeper&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lession 1/DroidCafeInput&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lession 1/DroidCafe&#10;C:/Users/ASUS/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul2&#10;C:/Users/ASUS/Documents/Android/Capstone/Feedback&#10;C:/Users/ASUS/Documents/Android/Capstone/Test&#10;C:/Users/ASUS/Documents/Android/DZULFIKRI_1202164349_SI4006_PAB_Modul2/DZULFIKRI_1202164349_SI4006_PAB_Modul2&#10;C:/Users/ASUS/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul1&#10;C:/Users/ASUS/Documents/Android/Lession 1/HelloToastt&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master/android-fundamentals-starter-apps-v2-master&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master/android-fundamentals-starter-apps-v2-master/SimpleCalc&#10;C:/Users/ASUS/Documents/Android/Lession 3/SimpleCalc&#10;C:/Users/ASUS/Documents/Android/Lession 3/Suport Libraries&#10;C:/Users/ASUS/Documents/Android/Lession 3/SimpleCalc/app&#10;C:/Users/ASUS/Documents/Android/Studi Case/New&#10;C:/Users/ASUS/Documents/Android/Studi Case/Studi Case1&#10;C:/Users/ASUS/Documents/Android/Lession 2/Two Activity&#10;C:/Users/ASUS/Documents/Android/Lession 2/Implicit Intents" />
-    <property name="file.gist.reindex.count" value="4699" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Documents/Android/Capstone/Feedback&#10;C:/Users/ASUS/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/KeyboardDialPhone&#10;C:/Users/ASUS/Documents/Android/Unit 2/android-fundamentals-apps-v2-master/TwoActivities&#10;C:/Users/ASUS/Documents/Android/responsi-mobile-master/responsi-mobile-master&#10;C:/Users/ASUS/Documents/Android/responsi-mobile-master&#10;C:/Users/ASUS/Documents/Android/Capstone/PetunjukPenggunaan&#10;C:/Users/ASUS/Documents/Android/Unit 1/Lession 1/Hello world&#10;C:/Users/ASUS/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/RIZKA_1202160050_SI4002_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/Studi Case/RIZKA_1202160050_SI4002_PAB_Modul3&#10;C:/Users/ASUS/Documents/Android/Studi Case/BAGAS_1202164301_SI4001_PAB_MODUL3&#10;C:/Users/ASUS/Documents/Android/Studi Case/RIZKA_1202160050_SI4002_PAB_Modul3.rar&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4/MaterialMe-Starter&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4/Scorekeeper&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lesiion 4&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lession 1/DroidCafeInput&#10;C:/Users/ASUS/Documents/Android/Unit 2/Lession 1/DroidCafe&#10;C:/Users/ASUS/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul2&#10;C:/Users/ASUS/Documents/Android/Capstone/Test&#10;C:/Users/ASUS/Documents/Android/DZULFIKRI_1202164349_SI4006_PAB_Modul2/DZULFIKRI_1202164349_SI4006_PAB_Modul2&#10;C:/Users/ASUS/Documents/Android/Studi Case/Bagas_1202164301_SI4001_PAB_Modul1&#10;C:/Users/ASUS/Documents/Android/Lession 1/HelloToastt&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master/android-fundamentals-starter-apps-v2-master&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master&#10;C:/Users/ASUS/Downloads/android-fundamentals-starter-apps-v2-master/android-fundamentals-starter-apps-v2-master/SimpleCalc&#10;C:/Users/ASUS/Documents/Android/Lession 3/SimpleCalc&#10;C:/Users/ASUS/Documents/Android/Lession 3/Suport Libraries&#10;C:/Users/ASUS/Documents/Android/Lession 3/SimpleCalc/app&#10;C:/Users/ASUS/Documents/Android/Studi Case/New&#10;C:/Users/ASUS/Documents/Android/Studi Case/Studi Case1" />
+    <property name="file.gist.reindex.count" value="4762" />
     <property name="fileTypeChangedCounter" value="1" />
     <property name="inspector.open.ConstraintLayout" value="true" />
     <property name="inspector.open.Favorite Attributes" value="true" />

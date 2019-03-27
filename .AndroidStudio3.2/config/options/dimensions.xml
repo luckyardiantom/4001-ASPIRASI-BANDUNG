@@ -27,10 +27,10 @@
     <location key="refactoring.ChangeSignatureDialog.0.0.1920.1080@144dpi" x="528" y="0" />
     <location key="Vcs.Push.Dialog.0.0.1920.1080@144dpi" x="477" y="98" />
     <location key="git4idea.merge.GitPullDialog.0.0.1920.1080@144dpi" x="579" y="183" />
-    <size key="GridCell.Tab.0.left.0.0.1920.1080@144dpi" width="1853" height="237" />
-    <size key="GridCell.Tab.0.center.0.0.1920.1080@144dpi" width="1853" height="237" />
-    <size key="GridCell.Tab.0.right.0.0.1920.1080@144dpi" width="1853" height="237" />
-    <size key="GridCell.Tab.0.bottom.0.0.1920.1080@144dpi" width="1853" height="237" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080@144dpi" width="1853" height="-12" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080@144dpi" width="1853" height="-12" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080@144dpi" width="1853" height="-12" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080@144dpi" width="1853" height="-12" />
     <size key="SettingsEditor.0.0.1920.1080@144dpi" width="1575" height="864" />
     <size key="ProcessPopupWindow.0.0.1920.1080@144dpi" width="600" height="270" />
     <size key="GridCell.Tab.1.left.0.0.1920.1080@144dpi" width="0" height="0" />
