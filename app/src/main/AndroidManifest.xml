@@ -38,6 +38,10 @@
         <activity
             android:name=".Lapor"
             android:label="@string/title_activity_lapor"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StatusLaporan"
+            android:label="@string/title_activity_status_laporan"
             android:theme="@style/AppTheme"></activity>
     </application>
 

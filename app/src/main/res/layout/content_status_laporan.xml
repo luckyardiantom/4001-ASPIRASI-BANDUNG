@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".StatusLaporan"
+    tools:showIn="@layout/app_bar_status_laporan">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="72dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:text="Pengaduan"
+        android:textColor="@color/browser_actions_text_color"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="132dp"
+        android:layout_height="37dp"
+        android:text="Sedang Proses"
+        android:textColor="@color/browser_actions_text_color"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:text="Diterima "
+        android:textColor="@color/browser_actions_text_color"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="85dp"
+        android:layout_height="33dp"
+        android:text="Selesai"
+        android:textColor="@color/browser_actions_text_color"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="58dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/ic_pengaduan"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/ic_proses"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="51dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:src="@drawable/ic_donut_diterima"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="66dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_selesai"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

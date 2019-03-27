@@ -14,6 +14,10 @@
             android:icon="@drawable/ic_lapor"
             android:title="Lapor" />
         <item
+            android:id="@+id/nav_statuslaporan"
+            android:icon="@drawable/ic_status_laporan"
+            android:title="Status Laporan" />
+        <item
             android:id="@+id/nav_nomortelepondarurat"
             android:icon="@drawable/ic_nomortelepondarurat"
             android:title="No. Telepon Darurat" />
