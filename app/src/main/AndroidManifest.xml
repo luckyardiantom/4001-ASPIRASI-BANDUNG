@@ -13,12 +13,32 @@
         <activity android:name=".LOGIN" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".TampilanAwal">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".About_us"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PetunjukPenggunaan"
+            android:label="@string/title_activity_petunjuk_penggunaan"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Notlpdarurat"
+            android:label="@string/title_activity_notlpdarurat"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Lapor"
+            android:label="@string/title_activity_lapor"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

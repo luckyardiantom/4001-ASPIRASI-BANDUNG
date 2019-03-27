@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_lapor"
+            android:icon="@drawable/ic_lapor"
+            android:title="Lapor" />
+        <item
+            android:id="@+id/nav_nomortelepondarurat"
+            android:icon="@drawable/ic_nomortelepondarurat"
+            android:title="No. Telepon Darurat" />
+        <item
+            android:id="@+id/nav_petunjukpenggunaan"
+            android:icon="@drawable/ic_petunjukpenggunaan"
+            android:title="Petunjuk Penggunaan" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="Feedback" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/keluar"
+                android:icon="@drawable/icon_keluar"
+                android:title="Keluar" />
+        </menu>
+    </item>
+
+</menu>
