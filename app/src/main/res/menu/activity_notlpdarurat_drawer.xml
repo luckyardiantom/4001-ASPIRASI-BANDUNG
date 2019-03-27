@@ -5,13 +5,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
             android:id="@+id/nav_lapor"
             android:icon="@drawable/ic_lapor"
             android:title="Lapor" />
-        <item
-            android:id="@+id/nav_nomortelepondarurat"
-            android:icon="@drawable/ic_nomortelepondarurat"
-            android:title="No. Telepon Darurat" />
         <item
             android:id="@+id/nav_petunjukpenggunaan"
             android:icon="@drawable/ic_petunjukpenggunaan"

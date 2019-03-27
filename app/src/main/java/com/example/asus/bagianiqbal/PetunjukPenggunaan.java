@@ -17,15 +17,17 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity
+public class PetunjukPenggunaan extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_petunjuk_penggunaan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -36,8 +38,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
-
 
     @Override
     public void onBackPressed() {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.petunjuk_penggunaan, menu);
         return true;
     }
 
@@ -70,14 +70,18 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
     private void logout(){
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getApplicationContext(), TampilanAwal.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Toast.makeText(MainActivity.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PetunjukPenggunaan.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
+    }
+    private void Home(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
     private void aboutus(){
         Intent intent = new Intent(getApplicationContext(), About_us.class);
@@ -86,11 +90,6 @@ public class MainActivity extends AppCompatActivity
     }
     private void feedback(){
         Intent intent = new Intent(getApplicationContext(), Feedback.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-    }
-    private void petunjukpenggunaan(){
-        Intent intent = new Intent(getApplicationContext(), PetunjukPenggunaan.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
@@ -111,27 +110,28 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_lapor) {
+        if (id == R.id.nav_Home) {
+            Home();
+        } else if (id == R.id.nav_lapor) {
             lapor();
 
         } else if (id == R.id.nav_nomortelepondarurat) {
             notlpdarurat();
 
         } else if (id == R.id.nav_petunjukpenggunaan) {
-            petunjukpenggunaan();
 
         } else if (id == R.id.nav_feedback) {
             feedback();
+
         } else if (id == R.id.nav_aboutus) {
-           aboutus();
+            aboutus();
 
         } else if (id == R.id.keluar) {
-           logout();
+            logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }
