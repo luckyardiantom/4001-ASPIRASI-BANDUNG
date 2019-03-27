@@ -8,15 +8,10 @@
             android:id="@+id/nav_Home"
             android:icon="@drawable/ic_home"
             android:title="Home" />
-
         <item
             android:id="@+id/nav_lapor"
             android:icon="@drawable/ic_lapor"
             android:title="Lapor" />
-        <item
-            android:id="@+id/nav_statuslaporan"
-            android:icon="@drawable/ic_status_laporan"
-            android:title="Status Laporan" />
         <item
             android:id="@+id/nav_nomortelepondarurat"
             android:icon="@drawable/ic_nomortelepondarurat"
@@ -29,6 +24,11 @@
             android:id="@+id/nav_feedback"
             android:icon="@drawable/ic_feedback"
             android:title="Feedback" />
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/ic_aboutus"
+            android:title="About Us" />
+
     </group>
 
     <item android:title="Communicate">

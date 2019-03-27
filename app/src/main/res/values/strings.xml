@@ -11,4 +11,5 @@
     <string name="title_activity_petunjuk_penggunaan">Petunjuk Penggunaan</string>
     <string name="title_activity_notlpdarurat">Nomor Telepon Darurat</string>
     <string name="title_activity_lapor">Lapor</string>
+    <string name="title_activity_status_laporan">Status Laporan</string>
 </resources>

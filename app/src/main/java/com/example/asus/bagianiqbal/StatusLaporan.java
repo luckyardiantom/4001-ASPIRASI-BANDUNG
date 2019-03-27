@@ -17,16 +17,15 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Lapor extends AppCompatActivity
+public class StatusLaporan extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lapor);
+        setContentView(R.layout.activity_status_laporan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -51,7 +50,7 @@ public class Lapor extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.lapor, menu);
+        getMenuInflater().inflate(R.menu.status_laporan, menu);
         return true;
     }
 
@@ -73,7 +72,7 @@ public class Lapor extends AppCompatActivity
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getApplicationContext(), TampilanAwal.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Toast.makeText(Lapor.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
+        Toast.makeText(StatusLaporan.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
     }
@@ -87,6 +86,11 @@ public class Lapor extends AppCompatActivity
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+    private void feedback(){
+        Intent intent = new Intent(getApplicationContext(), Feedback.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
     private void petunjukpenggunaan(){
         Intent intent = new Intent(getApplicationContext(), PetunjukPenggunaan.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -97,17 +101,11 @@ public class Lapor extends AppCompatActivity
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
-    private void feedback(){
-        Intent intent = new Intent(getApplicationContext(), Feedback.class);
+    private void lapor(){
+        Intent intent = new Intent(getApplicationContext(), Lapor.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
-    private void statuslaporan(){
-        Intent intent = new Intent(getApplicationContext(), StatusLaporan.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-    }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -118,6 +116,7 @@ public class Lapor extends AppCompatActivity
         if (id == R.id.nav_Home) {
             Home();
         } else if (id == R.id.nav_lapor) {
+            lapor();
 
         } else if (id == R.id.nav_nomortelepondarurat) {
             notlpdarurat();
@@ -134,9 +133,7 @@ public class Lapor extends AppCompatActivity
         } else if (id == R.id.keluar) {
             logout();
         }
-        else if (id == R.id.nav_statuslaporan) {
-            statuslaporan();
-        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

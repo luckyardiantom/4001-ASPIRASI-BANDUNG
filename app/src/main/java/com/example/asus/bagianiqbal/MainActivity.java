@@ -104,6 +104,11 @@ public class MainActivity extends AppCompatActivity
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+    private void statuslaporan(){
+        Intent intent = new Intent(getApplicationContext(), StatusLaporan.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -127,6 +132,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.keluar) {
            logout();
+        }
+        else if (id == R.id.nav_statuslaporan) {
+            statuslaporan();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
