@@ -12,7 +12,7 @@ public class Card {
         this.tanggal = harga;
         this.deskripsi = deskripsi;
     }
-
+///
     public String getImagePath() {
         return imagePath;
     }
