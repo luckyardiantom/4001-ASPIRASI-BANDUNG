@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "327637200020",
+    "firebase_url": "https://lapor-48fd5.firebaseio.com",
+    "project_id": "lapor-48fd5",
+    "storage_bucket": "lapor-48fd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327637200020:android:458d4c2ec1bd4c74",
+        "android_client_info": {
+          "package_name": "com.example.aspirasilapor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327637200020-hjbptc0guqm9pucac2s5n3t5p78dfv0m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aspirasilapor",
+            "certificate_hash": "f063ec617150b035d71cf9a3289ca87f2e26518b"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9upXw4RG0gHyrf_wq9GwxefjPVcQN2Gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327637200020-4olb426ln02tlcdhpm0fkm17ulnrnsem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
