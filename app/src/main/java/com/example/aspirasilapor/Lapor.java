@@ -1,291 +1,284 @@
 package com.example.aspirasilapor;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Context;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.UUID;
 
-public class Lapor extends AppCompatActivity {
+public class Lapor extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    int REQUEST = 91, REQUEST_GET_SINGLE_FILE = 202, REQUEST_CAPTURE_IMAGE = 234;
-    Bitmap bitmap;
-    ImageView foto;
-    FirebaseFirestore db;
-    FirebaseAuth mAuth;
-    Uri uri;
-    String imagePath;
-    EditText kategori, tanggal, desk;
-
+    private Button PilihGambar, Upload;
+    private ImageView Img;
+    private EditText edtKategori, edtTanggal, edtDesk;
+    private Uri filePath;
     FirebaseStorage storage;
     StorageReference storageReference;
-
-    Map<String, Object> menu;
-
-    boolean success = false;
-
+    private final int PICK_IMAGE_REQUEST = 71;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lapor);
-        foto = findViewById(R.id.image);
-        db = FirebaseFirestore.getInstance();
-        mAuth = FirebaseAuth.getInstance();
-        //Init
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        kategori = findViewById(R.id.edtKategori);
-        tanggal = findViewById(R.id.edtTanggal);
-        desk = findViewById(R.id.edtDesk);
+        PilihGambar = (Button) findViewById(R.id.PilihGambar);
+        Upload = (Button) findViewById(R.id.Upload);
+        Img = (ImageView) findViewById(R.id.Img);
+        edtDesk = (EditText) findViewById(R.id.edtDesk);
+        edtTanggal = (EditText) findViewById(R.id.edtTanggal);
+        edtKategori = (EditText) findViewById(R.id.edtKategori);
 
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setPersistenceEnabled(true)
-                .build();
-        db.setFirestoreSettings(settings);
+        PilihGambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseImage();
+            }
+        });
 
+        Upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uploadImage();
+            }
+        });
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public void btnTambah(View view) {
-        new AsyncTask<Void, Boolean, Boolean>() {
-
-
-            @Override
-            protected void onPreExecute() {
-                menu = new HashMap<>();
-
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(Boolean aBoolean) {
-                if (aBoolean) {
-                    Toast.makeText(Lapor.this, "Berhasil", Toast.LENGTH_SHORT).show();
-                    finish();
-
-                }
-                super.onPostExecute(aBoolean);
-            }
-
-            @Override
-            protected Boolean doInBackground(Void... voids) {
-                menu.put("Kategori", kategori.getText().toString());
-                menu.put("Tanggal", tanggal.getText().toString());
-                menu.put("Deskripsi", desk.getText().toString());
-
-                db.collection(mAuth.getUid())
-                        .add(menu)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-//                                docRef = documentReference.getId();
-                                //Upload data berhasil;
-                                success = true;
-                                if (uri != null) {
-                                    StorageReference ref = storageReference.child("images/" + documentReference.getId());
-                                    ref.putFile(uri)
-                                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                                @Override
-                                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                                    Toast.makeText(Lapor.this, "Sudah Terunggah", Toast.LENGTH_SHORT).show();
-
-                                                }
-                                            })
-                                            .addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Toast.makeText(Lapor.this, "Gagal " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                }
-
-                                            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                                        @Override
-                                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                                            Toast.makeText(Lapor.this, "Mengunggah...", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                                }
-                                finish();
-                            }
-                        });
-
-                return success;
-            }
-        }.execute();
-
+    private void chooseImage() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Pilih Gambar"), PICK_IMAGE_REQUEST);
     }
 
-    public void upFireStore() {
+    private void uploadImage() {
 
-    }
+        if (filePath != null) {
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle("Uploading...");
+            progressDialog.show();
 
-    public void btnAdd (View view) {
-        if (ContextCompat.checkSelfPermission(Lapor.this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
+            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
+            ref.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            progressDialog.dismiss();
+                            Toast.makeText(Lapor.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(Lapor.this, "Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
+                                    .getTotalByteCount());
+                            progressDialog.setMessage("Uploaded " + (int) progress + "%");
+                        }
+                    });
+        }
 
-            // Permission is not granted
-            // Should we show an explanation?
-            if (ActivityCompat.shouldShowRequestPermissionRationale(Lapor.this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                // Show an explanation to the user *asynchronously* -- don't block
-                // this thread waiting for the user's response! After the user
-                // sees the explanation, try again to request the permission.
-            } else {
-                // No explanation needed; request the permission
-                ActivityCompat.requestPermissions(Lapor.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        REQUEST);
-
-                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                // app-defined int constant. The callback method gets the
-                // result of the request.
-            }
+        if (TextUtils.isEmpty(edtKategori.getText()) || TextUtils.isEmpty(edtTanggal.getText()) || TextUtils.isEmpty(edtDesk.getText())) {
+            Toast.makeText(Lapor.this, "Data yang diminta tidak boleh kosong", Toast.LENGTH_SHORT).show();
         } else {
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("image/*");
-            startActivityForResult(Intent.createChooser(intent, "Pilih Gambar"),
-                    REQUEST_GET_SINGLE_FILE);
+            //instansiasi database firebase
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+            //Referensi database yang dituju
+            DatabaseReference referensi = database.getReference("Lapor").child(edtTanggal.getText().toString());
+
+            //memberi nilai pada referensi yang dituju
+            referensi.child("Deskripsi").setValue(edtDesk.getText().toString());
+            referensi.child("Kategori").setValue(edtKategori.getText().toString());
         }
     }
 
-    @SuppressLint("StaticFieldLeak")
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, final Intent data) {
-        if (resultCode == RESULT_OK) {
-            if (requestCode == REQUEST_CAPTURE_IMAGE) {
-                if (data != null && data.getExtras() != null) {
-                    new AsyncTask<Void, Void, Void>() {
-                        @Override
-                        protected Void doInBackground(Void... voids) {
-                            bitmap = (Bitmap) data.getExtras().get("data");
-                            return null;
-                        }
-
-                        @Override
-                        protected void onPostExecute(Void aVoid) {
-                            foto.setImageBitmap(bitmap);
-                            super.onPostExecute(aVoid);
-                        }
-                    }.execute();
-                }
-            } else if (requestCode == REQUEST_GET_SINGLE_FILE) {
-                new AsyncTask<Void, Void, Void>() {
-                    @Override
-                    protected void onPreExecute() {
-                        uri = data.getData();
-                        super.onPreExecute();
-                    }
-
-                    @Override
-                    protected void onPostExecute(Void aVoid) {
-                        foto.setImageBitmap(bitmap);
-                        super.onPostExecute(aVoid);
-                    }
-
-                    @Override
-                    protected Void doInBackground(Void... voids) {
-                        imagePath = getPathFromURI(getApplicationContext(), uri);
-                        try {
-                            bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),
-                                    uri);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        return null;
-                    }
-                }.execute();
-            }
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
-
-
     }
 
-    private static String getPathFromURI(Context context, Uri uri) {
-        final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
-        Log.i("URI", uri + "");
-        String result = uri + "";
-        // DocumentProvider
-        //  if (isKitKat && DocumentsContract.isDocumentUri(context, uri)) {
-        if (isKitKat && (result.contains("media.documents"))) {
-            String[] ary = result.split("/");
-            int length = ary.length;
-            String imgary = ary[length - 1];
-            final String[] dat = imgary.split("%3A");
-            final String docId = dat[1];
-            final String type = dat[0];
-            Uri contentUri = null;
-            if ("image".equals(type)) {
-                contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-            } else if ("video".equals(type)) {
-            } else if ("audio".equals(type)) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+                && data != null && data.getData() != null )
+        {
+            filePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                Img.setImageBitmap(bitmap);
             }
-            final String selection = "_id=?";
-            final String[] selectionArgs = new String[]{
-                    dat[1]
-            };
-            return getDataColumn(context, contentUri, selection, selectionArgs);
-        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            return getDataColumn(context, uri, null, null);
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
         }
-        // File
-        else if ("file".equalsIgnoreCase(uri.getScheme())) {
-            return uri.getPath();
-        }
-        return null;
     }
 
-    public static String getDataColumn(Context context, Uri uri, String selection, String[] selectionArgs) {
-        Cursor cursor = null;
-        final String column = "_data";
-        final String[] projection = {
-                column
-        };
-        try {
-            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null);
-            if (cursor != null && cursor.moveToFirst()) {
-                final int column_index = cursor.getColumnIndexOrThrow(column);
-                return cursor.getString(column_index);
-            }
-        } finally {
-            if (cursor != null)
-                cursor.close();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.lapor, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
         }
-        return null;
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void logout(){
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getApplicationContext(), TampilanAwal.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Toast.makeText(Lapor.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+
+    }
+    private void Home(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    private void aboutus(){
+        Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    private void petunjukpenggunaan(){
+        Intent intent = new Intent(getApplicationContext(), PetunjukPenggunaan.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    private void notlpdarurat(){
+        Intent intent = new Intent(getApplicationContext(), Notlpdarurat.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    private void feedback(){
+        Intent intent = new Intent(getApplicationContext(), Feedback.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    private void statuslaporan(){
+        Intent intent = new Intent(getApplicationContext(), StatusLaporan.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_Home) {
+            Home();
+        } else if (id == R.id.nav_lapor) {
+
+        } else if (id == R.id.nav_nomortelepondarurat) {
+            notlpdarurat();
+
+        } else if (id == R.id.nav_petunjukpenggunaan) {
+            petunjukpenggunaan();
+
+        } else if (id == R.id.nav_feedback) {
+            feedback();
+
+        } else if (id == R.id.nav_aboutus) {
+            aboutus();
+
+        } else if (id == R.id.keluar) {
+            logout();
+        }
+        else if (id == R.id.nav_statuslaporan) {
+            statuslaporan();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
