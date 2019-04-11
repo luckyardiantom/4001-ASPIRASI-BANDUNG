@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "599409084621",
+    "firebase_url": "https://aspirasistore.firebaseio.com",
+    "project_id": "aspirasistore",
+    "storage_bucket": "aspirasistore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599409084621:android:fa880c0510564899",
+        "android_client_info": {
+          "package_name": "com.aspirasibandung.aspirasibandung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599409084621-gaoqpuqum2c85m68869e2hv8afs7skkk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aspirasibandung.aspirasibandung",
+            "certificate_hash": "e0366905a8c82dd8dfb57411a6918d01d541080c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOCp74ZjnR_OqhmQEiLli92si4D_MOqoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599409084621-ehvvfkmds5bvq8c3p4ctab1716ra3eja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
