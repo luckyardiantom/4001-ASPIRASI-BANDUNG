@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aspirasibandung.aspirasibandung">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Registrasi" />
+        <activity android:name=".TampilanAwal" />
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PetunjukPenggunaan"
+            android:label="@string/title_activity_petunjuk_penggunaan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notlpdarurat"
+            android:label="@string/title_activity_notlpdarurat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Lapor"
+            android:label="@string/title_activity_lapor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StatusLaporan"
+            android:label="@string/title_activity_status_laporan"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
