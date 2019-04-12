@@ -77,7 +77,7 @@ public class Notlpdarurat extends AppCompatActivity
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Toast.makeText(Notlpdarurat.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
         startActivity(intent);
-
+//
     }
     private void Home(){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);

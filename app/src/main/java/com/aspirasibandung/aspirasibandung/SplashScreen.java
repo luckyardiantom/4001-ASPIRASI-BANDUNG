@@ -12,7 +12,7 @@ public class SplashScreen extends Activity {
 
     //Set waktu lama splashscreen
     private static int splashInterval = 3000;
-
+    //Perubahan terhadap splashscreen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
