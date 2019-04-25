@@ -1,18 +1,10 @@
 package com.example.aspirasilapor;
 
-import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -21,47 +13,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
-import java.util.UUID;
+import java.util.Map;
 
 public class Lapor extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button PilihGambar, Upload;
-    private ImageView Img;
-    private EditText edtKategori, edtTanggal, edtDesk;
-    private Uri filePath;
+    int REQUEST = 91, REQUEST_GET_SINGLE_FILE = 202, REQUEST_CAPTURE_IMAGE = 234;
+    Bitmap bitmap;
+    ImageView foto;
+    FirebaseFirestore db;
+    FirebaseAuth mAuth;
+    Uri uri;
+    String imagePath;
+    EditText kategori, tanggal, deskripsi;
+
     FirebaseStorage storage;
     StorageReference storageReference;
-    private final int PICK_IMAGE_REQUEST = 71;
+
+    Map<String, Object> x;
+
+    ProgressBar progressBar;
+
+    boolean success = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,31 +64,27 @@ public class Lapor extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        foto = findViewById(R.id.Img);
+        db = FirebaseFirestore.getInstance();
+        mAuth= FirebaseAuth.getInstance();
+
+        //init
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        PilihGambar = (Button) findViewById(R.id.PilihGambar);
-        Upload = (Button) findViewById(R.id.Upload);
-        Img = (ImageView) findViewById(R.id.Img);
-        edtDesk = (EditText) findViewById(R.id.edtDesk);
-        edtTanggal = (EditText) findViewById(R.id.edtTanggal);
-        edtKategori = (EditText) findViewById(R.id.edtKategori);
+        kategori = findViewById(R.id.edtKategori);
+        tanggal = findViewById(R.id.edtTanggal);
+        deskripsi = findViewById(R.id.edtDesk);
 
-        PilihGambar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chooseImage();
-            }
-        });
+        progressBar = findViewById(R.id.progressBar);
 
-        Upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uploadImage();
-            }
-        });
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(true)
+                .build();
+        db.setFirestoreSettings();
     }
 
-    private void chooseImage() {
+    /*private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -155,8 +136,8 @@ public class Lapor extends AppCompatActivity
             //memberi nilai pada referensi yang dituju
             referensi.child("Deskripsi").setValue(edtDesk.getText().toString());
             referensi.child("Kategori").setValue(edtKategori.getText().toString());
-        }
-    }
+        }*/
+    }////////////////////////////////
 
     @Override
     public void onBackPressed() {

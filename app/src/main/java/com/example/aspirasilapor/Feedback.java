@@ -2,40 +2,38 @@ package com.example.aspirasilapor;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.firebase.client.ChildEventListener;
-import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity
+public class Feedback extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    Firebase fb;
-    ArrayList<String> tanggal = new ArrayList<>();
-    ListView lv;
-
+    EditText nameData, emailData, messageData;
+    Button btnSend, btnDetail;
+    Firebase firebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_feedback);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,44 +44,74 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+        nameData= findViewById(R.id.nameData);
+        emailData= findViewById(R.id.emailData);
+        messageData= findViewById(R.id.messageData);
+
+        btnSend = findViewById(R.id.btnSend);
+        btnDetail = findViewById(R.id.btnDetail);
         Firebase.setAndroidContext(this);
 
-        fb = new Firebase("https://aspirasistore.firebaseio.com/Lapor/Tanggal");
-        lv = (ListView) findViewById(R.id.Listview);
+        String UniqueID =
+                Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                        Settings.Secure.ANDROID_ID);
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,tanggal);
+        firebase = new Firebase("https://feedback-d7f23.firebaseio.com/Users" +UniqueID);
 
-        lv.setAdapter(arrayAdapter);
-        fb.addChildEventListener(new ChildEventListener() {
+        btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value = dataSnapshot.getValue(String.class);
-                tanggal.add(value);
-                arrayAdapter.notifyDataSetChanged();
-            }
+            public void onClick(View v) {
+                btnDetail.setEnabled(true);
+                final String name = nameData.getText().toString();
+                final String email = emailData.getText().toString();
+                final String message = messageData.getText().toString();
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
+                Firebase child_name = firebase.child("Name");
+                child_name.setValue(name);
+                if (name.isEmpty()) {
+                    nameData.setError("Nama Harus di Isi!");
+                    btnSend.setEnabled(false);
+                } else
+                {
+                    nameData.setError(null);
+                    btnSend.setEnabled(true);
+                }
+                Firebase child_email = firebase.child("Email");
+                child_email.setValue(email);
+                if (email.isEmpty())
+                {
+                    emailData.setError("Email Harus di Isi!");
+                    btnSend.setEnabled(false);
+                } else
+                {
+                    emailData.setError(null);
+                    btnSend.setEnabled(true);
+                }
+                Firebase child_message = firebase.child("Message");
+                child_message.setValue(message);
+                if (message.isEmpty())
+                {
+                    messageData.setError("Kritik dan Saran harus di isi");
+                    btnSend.setEnabled(false);
+                }
+                else {
+                    messageData.setError(null);
+                    btnSend.setEnabled(true);
+                }
+                Toast.makeText(Feedback.this, "Data Anda Telah Tersimpan", Toast.LENGTH_SHORT).show();
+                btnDetail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new AlertDialog.Builder(Feedback.this)
+                                .setTitle("Detail Masukan: ")
+                                .setMessage("Name - " + name + "\n\nEmail - " + email + "\n\nMessage - " +message)
+                                .show();
+                    }
+                });
             }
         });
     }
-
 
 
     @Override
@@ -99,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.feedback, menu);
         return true;
     }
 
@@ -122,17 +150,17 @@ public class MainActivity extends AppCompatActivity
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getApplicationContext(), TampilanAwal.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Toast.makeText(MainActivity.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Feedback.this, "Thanks for visited", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
     }
-    private void aboutus(){
-        Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+    private void Home(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
-    private void feedback(){
-        Intent intent = new Intent(getApplicationContext(), Feedback.class);
+    private void aboutus(){
+        Intent intent = new Intent(getApplicationContext(), AboutUs.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
@@ -163,7 +191,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_lapor) {
+        if (id == R.id.nav_Home) {
+            Home();
+        } else if (id == R.id.nav_lapor) {
             lapor();
 
         } else if (id == R.id.nav_nomortelepondarurat) {
@@ -173,7 +203,7 @@ public class MainActivity extends AppCompatActivity
             petunjukpenggunaan();
 
         } else if (id == R.id.nav_feedback) {
-            feedback();
+
         } else if (id == R.id.nav_aboutus) {
             aboutus();
 
@@ -188,5 +218,4 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }
