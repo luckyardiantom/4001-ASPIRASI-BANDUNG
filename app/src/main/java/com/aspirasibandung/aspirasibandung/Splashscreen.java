@@ -21,7 +21,7 @@ public class Splashscreen extends AwesomeSplash {
         configSplash.setAnimCircularRevealDuration(3000);
         configSplash.setRevealFlagX(Flags.REVEAL_LEFT);
         configSplash.setRevealFlagX(Flags.REVEAL_BOTTOM);
-
+//
         //menambahkan logo
         configSplash.setLogoSplash(R.drawable.aspirasi);
         configSplash.setAnimLogoSplashDuration(2000);
