@@ -1,20 +1,20 @@
 package com.aspirasibandung.aspirasibandung;
 
 public class CardLapor {
-    String imagePath, kategori, harga, deskripsi;
+    String img, kategori,deskripsi;
 
-    public CardLapor(String id, String imagePath, String kategori) {
-        this.imagePath = imagePath;
+    public CardLapor(String img, String kategori, String deskripsi) {
+        this.img = img;
         this.kategori = kategori;
         this.deskripsi = deskripsi;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getimg() {
+        return img;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setimg(String img) {
+        this.img = img;
     }
 
     public String getkategori() {

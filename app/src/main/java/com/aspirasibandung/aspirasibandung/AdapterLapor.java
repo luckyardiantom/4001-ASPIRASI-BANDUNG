@@ -69,7 +69,7 @@ public class AdapterLapor extends RecyclerView.Adapter<AdapterLapor.ViewHolder> 
             kategori.setText(card.getkategori());
             deskripsi.setText(card.getdeskripsi());
 
-            final StorageReference islandRef = FirebaseStorage.getInstance().getReference().child("images/" + card.getImagePath());
+            final StorageReference islandRef = FirebaseStorage.getInstance().getReference().child("images/" + card.getimg());
 
             final long ONE_MEGABYTE = 10* 1024 * 1024;
             islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
