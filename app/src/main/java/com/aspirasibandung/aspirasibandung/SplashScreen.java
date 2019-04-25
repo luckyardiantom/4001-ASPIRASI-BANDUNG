@@ -29,7 +29,7 @@ public class SplashScreen extends AwesomeSplash {
         configSplash.setLogoSplash(R.drawable.logo);
         configSplash.setAnimLogoSplashDuration(2000);
         configSplash.setAnimTitleTechnique(Techniques.FadeInUp);
-
+////////
         //menambahkan title
         configSplash.setTitleSplash("Bandung Juara");
         configSplash.setTitleTextColor(R.color.splash_title);
