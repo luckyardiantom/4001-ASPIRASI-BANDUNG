@@ -43,4 +43,3 @@ public class SplashScreen extends AwesomeSplash {
         startActivity(new Intent(SplashScreen.this, TampilanAwal.class));
     }
 }
-//
