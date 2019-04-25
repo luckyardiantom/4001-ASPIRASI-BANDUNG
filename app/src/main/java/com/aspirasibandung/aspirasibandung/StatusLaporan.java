@@ -67,7 +67,7 @@ public class StatusLaporan extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
+//
         return super.onOptionsItemSelected(item);
     }
     private void logout(){
